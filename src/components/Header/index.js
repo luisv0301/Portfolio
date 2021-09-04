@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import Button from "../shared/Button";
+import ButtonLink from "../shared/Buttons/ButtonLink.js";
 import KUTE from "kute.js";
 
 import "./header.scss";
@@ -121,7 +121,7 @@ const Header = () => {
           maiores! Placeat ea corrupti officiis similique maiores consequatur
           fugit laudantium error assumenda quasi modi quisquam incidunt.
         </p>
-        <Button />
+        <ButtonLink />
       </header>
     </div>
   );

@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import Button from "../shared/Button";
+import Button from "../shared/Buttons/Button.js";
 import "./form.scss";
 
 export default function Form() {

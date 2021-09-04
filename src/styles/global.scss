@@ -70,6 +70,7 @@ body {
 
 /* A elements that don't have a class get default styles */
 a {
+  text-decoration: none;
   color: inherit;
 }
 a:not([class]) {
@@ -130,7 +131,7 @@ h1 + * {
   margin-block-start: var(--spacing-sm);
 }
 
-p + button {
+p + a {
   margin-block-start: var(--spacing-md);
 }
 button {
