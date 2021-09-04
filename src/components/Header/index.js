@@ -15,7 +15,7 @@ const Header = () => {
       { path: bloob2.current },
       { repeat: 999, duration: 9000, yoyo: true }
     );
-    // tween.start();
+    tween.start();
   }, []);
 
   return (
