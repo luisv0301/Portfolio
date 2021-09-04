@@ -1,0 +1,28 @@
+.form {
+  padding-block-end: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: Min(100%, 520px);
+  &__label {
+    margin-block-end: 0.5rem;
+  }
+  &__label:not(:first-child) {
+    margin-block-start: 1.5rem;
+  }
+  &__input {
+    border-radius: 1rem;
+    padding: var(--spacing-sm);
+    background-color: var(--light-gray);
+  }
+  &__textarea {
+    height: 8rem;
+    padding: 1rem;
+    margin-block-end: var(--spacing-md);
+    border-radius: 1rem;
+    background-color: var(--light-gray);
+    resize: none;
+  }
+  &__message {
+    color: purple;
+  }
+}

@@ -1,0 +1,39 @@
+.header {
+  width: Min(90%, 60ch);
+  &__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding-block: 6rem;
+    background-image: url("../../images/Group\ 11bloobs\ group.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &__title {
+    font-size: 24px;
+    font-weight: 800;
+    margin-block-end: var(--spacing-sm);
+  }
+  &__subtitle {
+    background-image: url("../../images/Group\ 12title.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__bloob {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    &--hidden {
+      visibility: hidden;
+    }
+  }
+}
