@@ -1,27 +1,86 @@
+@import "../../styles/mixin";
+
 .navbar {
+  position: relative;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1rem 2rem;
-
   box-shadow: 0 2px 1px rgb(0 0 0 / 8%), 0 5px 15px rgb(0 0 0 / 11%);
-
   background-color: white;
   &__logo {
-    color: blue;
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+    width: 2.25rem;
+    height: 2.25rem;
+    font-weight: 800;
+    border-radius: 50%;
+    color: var(--white);
+    background: linear-gradient(213.94deg, #d8aafd 10.42%, #ac54f0 94.34%);
   }
   &__list {
     display: flex;
     margin: 0;
     list-style: none;
+    @include sm-breakpoint {
+      position: absolute;
+      left: 0;
+      top: 72px;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin: 0;
+      width: 100%;
+      list-style: none;
+      background-color: var(--white);
+      z-index: 5;
+      padding: 2rem;
+      border-block-start: 1px solid var(--light-gray);
+    }
   }
   &__items {
     margin-inline-start: 2rem;
+    @include sm-breakpoint {
+      width: 100%;
+      margin: 0;
+    }
   }
   &__link {
     text-decoration: none;
     transition: color 250ms ease-in;
+    @include sm-breakpoint {
+      width: 100%;
+      text-align: center;
+      display: inline-block;
+      padding: 1rem;
+      border-radius: 16px;
+      &:hover {
+        background-color: rgb(231, 206, 255);
+      }
+    }
     &:hover {
       color: var(--indigo);
     }
   }
+  &__hamburmenu {
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    width: fit-content;
+    padding: 0.5rem;
+    background-color: transparent;
+    outline: 1px var(--indigo);
+    @include sm-breakpoint {
+      display: grid;
+    }
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}
+.isVisible {
+  display: grid;
 }
