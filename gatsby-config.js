@@ -5,7 +5,9 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "Luis Vasquez portfolio",
     description:
-      "Hogwarts Potions master, Head of Slytherin house and former Death Eater.",
+      "I´ll help you to get the website you always wished for, let´s make it happen.",
+    keyword: "portfolio, javascript, react, frontend",
+    twitterUsername: "@luisv0301",
   },
   plugins: [
     "gatsby-plugin-gatsby-cloud",

@@ -7,7 +7,8 @@ import { useStaticQuery, graphql } from "gatsby";
 export default function Seo({ title, description }) {
   const { site } = useStaticQuery(query);
 
-  const { defaultTitle, defaultDescription } = site.siteMetadata;
+  const { defaultTitle, defaultDescription, keyword, twitterUsername } =
+    site.siteMetadata;
 
   const seo = {
     title: title || defaultTitle,
@@ -17,6 +18,9 @@ export default function Seo({ title, description }) {
   return (
     <Helmet title={seo.title}>
       <meta name="description" content={seo.description} />
+      <meta name="keyword" content={keyword} />
+      <meta name="twitter:creator" content={twitterUsername} />
+      <html lang="en" />
     </Helmet>
   );
 }
@@ -27,6 +31,8 @@ const query = graphql`
       siteMetadata {
         defaultTitle: title
         defaultDescription: description
+        keyword
+        twitterUsername
       }
     }
   }
