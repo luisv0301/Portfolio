@@ -1,0 +1,13 @@
+.contact__separation {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 1px;
+    background-color: var(--light-gray);
+  }
+}

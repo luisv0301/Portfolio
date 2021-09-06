@@ -13,7 +13,7 @@ const Header = () => {
       bloob1.current,
       { path: bloob1.current },
       { path: bloob2.current },
-      { repeat: 999, duration: 9000, yoyo: true }
+      { repeat: 15, duration: 9000, yoyo: true }
     );
     tween.start();
   }, []);

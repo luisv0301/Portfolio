@@ -4,8 +4,8 @@ import Header from "../components/Header";
 import Section from "../components/shared/Section";
 import Skills from "../components/Skills";
 import Cards from "../components/Cards";
-import Form from "../components/Form";
 import Seo from "../components/Seo";
+import Contact from "../components/Contact";
 import { graphql } from "gatsby";
 
 export const query = graphql`
@@ -44,7 +44,7 @@ const IndexPage = ({ data }) => {
           <Cards data={data} />
         </Section>
         <Section title="Let's talk" id="contact">
-          <Form />
+          <Contact />
         </Section>
       </main>
     </>

@@ -13,6 +13,11 @@
     border-radius: 1rem;
     padding: var(--spacing-sm);
     background-color: var(--light-gray);
+    outline: none;
+    border: 2px solid transparent;
+    &:focus {
+      border: 2px solid var(--indigo);
+    }
   }
   &__textarea {
     height: 8rem;
@@ -21,6 +26,11 @@
     border-radius: 1rem;
     background-color: var(--light-gray);
     resize: none;
+    outline: none;
+    border: 2px solid transparent;
+    &:focus {
+      border: 2px solid var(--indigo);
+    }
   }
   &__message {
     color: purple;

@@ -5,6 +5,8 @@
   --spacing-lg: 3rem;
   --spcaing-xl: 4rem;
 
+  --gap: 1.5rem;
+
   --white: #ffffff;
 
   --gray: #475569;
@@ -39,9 +41,11 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
 ul[role="list"],
 ol[role="list"] {
   list-style: none;
+  padding: 0;
 }
 
 /* Set core root defaults */
