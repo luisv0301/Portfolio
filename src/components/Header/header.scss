@@ -25,6 +25,9 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  &__text {
+    max-width: 480px;
+  }
   &__bloob {
     position: absolute;
     top: 50%;

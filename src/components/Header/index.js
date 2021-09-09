@@ -114,12 +114,9 @@ const Header = () => {
       <header className="header">
         <p className="header__title">Luis Vasquez</p>
         <h1 className="header__subtitle">Jr frontend developer</h1>
-        <p className="header_text">
-          hola como estas Lorem ipsum dolor sit amet, consectetur adipisicing
-          elit. Ex odit nihil quos est unde nemo obcaecati atque officia sequi,
-          nam dolor cum, accusamus impedit error sapiente ipsum eaque earum
-          maiores! Placeat ea corrupti officiis similique maiores consequatur
-          fugit laudantium error assumenda quasi modi quisquam incidunt.
+        <p className="header__text">
+          Self taught frontend developer, passionate about designing fantastic
+          user interfaces and accessible experiences.
         </p>
         <ButtonLink />
       </header>
