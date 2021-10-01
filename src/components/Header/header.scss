@@ -1,5 +1,7 @@
+@import "../../styles/mixin";
 .header {
   width: Min(90%, 60ch);
+  z-index: 5;
   &__wrapper {
     position: relative;
     display: flex;
@@ -11,16 +13,17 @@
     background-image: url("../../images/Group\ 11bloobs\ group.svg");
     background-position: center;
     background-repeat: no-repeat;
+    background-size: contain;
   }
   &__title {
     font-size: 24px;
     font-weight: 800;
+    color: var(--dark-gray);
     margin-block-end: var(--spacing-sm);
   }
   &__subtitle {
     background-image: url("../../images/Group\ 12title.svg");
     background-position: center;
-    background-repeat: no-repeat;
     background-repeat: no-repeat;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -32,11 +35,13 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    z-index: -1;
     transform: translate(-50%, -50%);
     width: 100%;
     &--hidden {
       visibility: hidden;
+    }
+    @include dark-mode {
+      opacity: 24%;
     }
   }
 }

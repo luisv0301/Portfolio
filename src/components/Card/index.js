@@ -14,7 +14,11 @@ export default function Card({
 }) {
   return (
     <article className="card">
-      <GatsbyImage image={image.gatsbyImageData} alt={title} />
+      <GatsbyImage
+        image={image.gatsbyImageData}
+        alt={title}
+        className="card__img"
+      />
       <ul className="card__categories" role="list">
         {categories.map((category, id) => (
           <li className="card__category" key={id}>

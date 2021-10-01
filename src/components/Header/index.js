@@ -113,7 +113,7 @@ const Header = () => {
 
       <header className="header">
         <p className="header__title">Luis Vasquez</p>
-        <h1 className="header__subtitle">Jr frontend developer</h1>
+        <h1 className="header__subtitle">Frontend developer</h1>
         <p className="header__text">
           Self taught frontend developer, passionate about designing fantastic
           user interfaces and accessible experiences.
