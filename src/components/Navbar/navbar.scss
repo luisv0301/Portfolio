@@ -39,7 +39,7 @@
       width: 100%;
       list-style: none;
       background-color: var(--white);
-      z-index: 5;
+      z-index: 10;
       padding: 2rem;
       border-block-start: 1px solid var(--light-gray);
     }
@@ -84,6 +84,7 @@
       display: grid;
     }
     svg {
+      color: var(--gray);
       width: 1.5rem;
       height: 1.5rem;
     }
