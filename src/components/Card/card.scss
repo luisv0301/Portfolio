@@ -1,22 +1,16 @@
-@import "../../styles/mixin";
-
 .card {
-  --bg-color: linear-gradient(
-    161.16deg,
-    #ffffff 3.96%,
-    #fefeff 37.14%,
-    #f6f8fc 106.73%
-  );
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: var(--spacing-sm);
-  background: var(--bg-color);
+  background: rgb(51,65,85);
+  background: linear-gradient(171deg, rgba(51,65,85,1) 0%, rgba(26,25,37,1) 100%);
   box-shadow: 0px 5px 10px rgb(9 30 66 / 6%), 0px 1px 2px rgb(9 30 66 / 17%);
   border-radius: 7px;
-  @include dark-mode {
-    --bg-color: linear-gradient(163.68deg, #1a1925 -0.83%, #232138 111.41%);
-  }
+  border-top: 1px solid #ffffff36;
+  border-left: 1px solid #ffffff36;
+  border-bottom: 1px solid hsl(240deg 10% 12%);
+  border-right: 1px solid hsl(240deg 10% 12%);
   &__img {
     width: 100%;
     border-radius: 3.5px;
@@ -36,8 +30,8 @@
     display: inline-block;
     padding: 0.25rem 0.5rem;
     font-size: 14px;
-    color: rgb(10, 83, 55);
-    background-color: rgb(157, 252, 216);
+    color: #042414;
+    background-color: #9cfcd78c;
     border-radius: 10px;
   }
   &__links {

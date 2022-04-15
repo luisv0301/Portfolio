@@ -1,3 +1,5 @@
+@import "../../../styles/mixin";
+
 .section {
   display: flex;
   flex-direction: column;
@@ -6,7 +8,20 @@
   margin-inline: auto;
   padding: var(--spacing-md);
   &__title {
+    scroll-margin-top: 4.5rem;
     text-align: center;
     margin-block-end: var(--spacing-sm);
+  }
+  &--padding-bottom {
+    padding-bottom: 7rem;
+  }
+}
+.section--bg-image {
+  background-image: url("../../../images/Group\ 14bottom.svg");
+  background-position: center -100%;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  @include md-breakpoint {
+    background-position: center -75%;
   }
 }

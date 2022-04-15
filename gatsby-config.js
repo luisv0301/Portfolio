@@ -2,11 +2,12 @@ require("dotenv").config();
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "Luis Vasquez portfolio",
+    siteUrl: "https://portfolioluisvasquez.gatsbyjs.io/",
+    title: "Luis Vasquez-Portfolio",
     description:
       "I´ll help you to get the website you always wished for, let´s make it happen.",
-    keyword: "portfolio, javascript, react, frontend",
+    keyword: "portfolio, javascript, react, frontend, UI design",
+    image: "src/images/social-media-img.JPG",
     twitterUsername: "@luisv0301",
   },
   plugins: [

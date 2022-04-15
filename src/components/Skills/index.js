@@ -1,11 +1,34 @@
 import React from "react";
+import { motion } from "framer-motion";
+
 import "./skills.scss";
+
+const list = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.5,
+    },
+  },
+};
+
+const item = {
+  hidden: { opacity: 0 },
+  show: { opacity: 1 },
+};
 
 export default function Skills() {
   return (
     <>
-      <ul className="skills__list">
-        <li className="skills__item">
+      <motion.ul
+        className="skills__list"
+        variants={list}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+      >
+        <motion.li className="skills__item" variants={item}>
           <svg
             width="50"
             height="56"
@@ -19,8 +42,8 @@ export default function Skills() {
             />
           </svg>
           <p>Html</p>
-        </li>
-        <li className="skills__item">
+        </motion.li>
+        <motion.li className="skills__item" variants={item}>
           <svg
             width="51"
             height="56"
@@ -34,8 +57,8 @@ export default function Skills() {
             />
           </svg>
           <p>Css</p>
-        </li>
-        <li className="skills__item">
+        </motion.li>
+        <motion.li className="skills__item" variants={item}>
           <svg
             width="57"
             height="56"
@@ -51,8 +74,8 @@ export default function Skills() {
             />
           </svg>
           <p>Javascript</p>
-        </li>
-        <li className="skills__item">
+        </motion.li>
+        <motion.li className="skills__item" variants={item}>
           <svg
             width="76"
             height="56"
@@ -66,8 +89,8 @@ export default function Skills() {
             />
           </svg>
           <p>Sass</p>
-        </li>
-        <li className="skills__item">
+        </motion.li>
+        <motion.li className="skills__item" variants={item}>
           <svg
             width="63"
             height="56"
@@ -85,8 +108,8 @@ export default function Skills() {
             />
           </svg>
           <p>React</p>
-        </li>
-        <li className="skills__item">
+        </motion.li>
+        <motion.li className="skills__item" variants={item}>
           <svg
             width="57"
             height="56"
@@ -100,8 +123,8 @@ export default function Skills() {
             />
           </svg>
           <p>Git</p>
-        </li>
-      </ul>
+        </motion.li>
+      </motion.ul>
     </>
   );
 }

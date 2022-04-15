@@ -7,6 +7,8 @@ import Cards from "../components/Cards";
 import Seo from "../components/Seo";
 import Contact from "../components/Contact";
 import { graphql } from "gatsby";
+import MobileNabar from "../components/MobileNavbar";
+import TimeLine from "../components/TimeLine";
 
 export const query = graphql`
   {
@@ -35,15 +37,19 @@ const IndexPage = ({ data }) => {
     <>
       <Seo />
       <Navbar />
+      <MobileNabar/>
       <Header />
       <main>
+        <Section title="About me" id="about-me">
+          <TimeLine/>
+        </Section>
         <Section title="Skills" id="skills">
           <Skills />
         </Section>
         <Section title="Projects" id="projects">
           <Cards data={data} />
         </Section>
-        <Section title="Let's talk" id="contact">
+        <Section title="Let's talk" id="contact" withPaddingBottom withBg>
           <Contact />
         </Section>
       </main>

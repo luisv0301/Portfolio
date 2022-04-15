@@ -1,0 +1,70 @@
+@import "../../styles/mixin";
+
+.timeline {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+    width: 10px;
+    height: 100%;
+    background: #c084fc;
+    background: linear-gradient(180deg, rgba(192, 132, 252, 0.8) 14%, rgba(83, 10, 147, 0.75) 100%);
+  }
+ 
+  &__item {
+    margin-left: 5rem;
+    padding: 2rem;
+    border-radius: 7px;
+    max-width: 700px;
+    position: relative;
+    background: #334155;
+    background: linear-gradient(171deg, #334155 0%, #1a1925 100%);
+    box-shadow: 0px 5px 10px rgb(9 30 66 / 6%), 0px 1px 2px rgb(9 30 66 / 17%);
+    border-radius: 7px;
+    border-top: 1px solid #ffffff36;
+    border-left: 1px solid #ffffff36;
+    border-bottom: 1px solid #1c1c22;
+    border-right: 1px solid #1c1c22;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translate(-100%, -50%);
+      width: 0;
+      height: 0;
+      border-top: 25px solid transparent;
+      border-right: 50px solid #334155;
+      border-bottom: 25px solid transparent;
+      @include sm-breakpoint{
+        border-top: 10px solid transparent;
+        border-right: 20px solid #334155;
+        border-bottom: 10px solid transparent;
+    }
+    }
+    &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    @include sm-breakpoint{
+        margin-left: 2rem;
+    } 
+  }
+  &__time {
+    color: #a855f7;
+    font-size: 1.4rem;
+    font-weight: 800;
+  }
+  &__emoji{
+    display: inline-block;
+    background-image: url("../../images/party.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 2rem;
+    height: 2rem;
+    margin-left: 0.5rem;
+  }
+}

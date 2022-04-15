@@ -4,11 +4,14 @@
   align-items: center;
   gap: var(--gap);
   &__links {
+    svg path{
+      fill: var(--gray);
+    }
     &:hover svg path {
       fill: var(--indigo);
     }
     svg {
-      width: 1.5rem;
+      width: 2rem;
     }
   }
 }

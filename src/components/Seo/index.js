@@ -1,13 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
-import { useLocation } from "@reach/router";
 import { useStaticQuery, graphql } from "gatsby";
 
 export default function Seo({ title, description }) {
   const { site } = useStaticQuery(query);
 
-  const { defaultTitle, defaultDescription, keyword, twitterUsername } =
+  const { defaultTitle, defaultDescription, keyword, image, twitterUsername } =
     site.siteMetadata;
 
   const seo = {
@@ -17,10 +16,20 @@ export default function Seo({ title, description }) {
 
   return (
     <Helmet title={seo.title}>
+      <html lang="en" />
+      <link
+        rel="icon"
+        type="image/jpg"
+        href="https://drive.google.com/uc?export=view&id=1wbhAogi_lmrzIadclxWFnlRM4WXxziLb"
+      />
+      <meta name="theme-color" content="#a855f7" />
       <meta name="description" content={seo.description} />
       <meta name="keyword" content={keyword} />
+      <meta name="image" content={image} />
       <meta name="twitter:creator" content={twitterUsername} />
-      <html lang="en" />
+      <meta name="og:image" content={image} />
+      <meta name="twitter:image" content={image} />
+      <meta name="twitter:title" content={seo.title} />
     </Helmet>
   );
 }
@@ -33,6 +42,7 @@ const query = graphql`
         defaultDescription: description
         keyword
         twitterUsername
+        image
       }
     }
   }
@@ -41,8 +51,10 @@ const query = graphql`
 Seo.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
+  image: PropTypes.string,
 };
 Seo.defaultProps = {
   title: null,
   description: null,
+  image: null,
 };

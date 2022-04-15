@@ -7,25 +7,19 @@
 
   --gap: 1.5rem;
 
-  --white: #ffffff;
+  --white: #232138;
 
-  --gray: #475569;
-  --dark-gray: #1e2a3b;
-  --light-gray: #cbd4e1;
+  
+  --gray: rgba(255, 255, 255, 0.65);
+  --dark-gray: rgba(255, 255, 255, 0.87);
+  --light-gray: #232138;
 
   --indigo: #7a6dff;
 
-  --bg-color: rgb(226 226 247 / 15%);
+  --bg-color: #16161b;
 
   @include sm-breakpoint {
     --spacing-md: 1rem;
-  }
-  @include dark-mode {
-    --gray: rgba(255, 255, 255, 0.65);
-    --dark-gray: rgba(255, 255, 255, 0.87);
-    --bg-color: #16161b;
-    --light-gray: #232138;
-    --white: #232138;
   }
 }
 /* Box sizing rules */
@@ -73,12 +67,6 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   background-color: var(--bg-color);
-  background-image: url("../images/Group\ 14bottom.svg");
-  background-position: center 118%;
-  background-repeat: no-repeat;
-  @include md-breakpoint {
-    background-position: center 110%;
-  }
 }
 
 /* A elements that don't have a class get default styles */
