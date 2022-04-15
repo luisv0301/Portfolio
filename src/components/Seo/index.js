@@ -6,7 +6,7 @@ import { useStaticQuery, graphql } from "gatsby";
 export default function Seo({ title, description }) {
   const { site } = useStaticQuery(query);
 
-  const { defaultTitle, defaultDescription, keyword, image, twitterUsername } =
+  const { defaultTitle, defaultDescription, keyword, twitterUsername, image } =
     site.siteMetadata;
 
   const seo = {
