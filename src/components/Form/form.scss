@@ -15,6 +15,7 @@
     background-color: var(--light-gray);
     outline: none;
     border: 2px solid transparent;
+    color: var(--gray);
     &:focus {
       border: 2px solid var(--indigo);
     }
@@ -28,6 +29,7 @@
     resize: none;
     outline: none;
     border: 2px solid transparent;
+    color: var(--gray);
     &:focus {
       border: 2px solid var(--indigo);
     }

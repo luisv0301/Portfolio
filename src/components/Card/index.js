@@ -1,8 +1,18 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 import { GatsbyImage } from "gatsby-plugin-image";
 
 import "./card.scss";
+
+const card = {
+  hidden: { opacity: 0.6, transformPerspective: 1000, rotateX: 45 },
+  show: {
+    opacity: 1,
+    transformPerspective: 1000,
+    rotateX: 0,
+  },
+};
 
 export default function Card({
   title,
@@ -13,7 +23,13 @@ export default function Card({
   repoUrl,
 }) {
   return (
-    <article className="card">
+    <motion.article
+      className="card"
+      variants={card}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+    >
       <GatsbyImage
         image={image.gatsbyImageData}
         alt={title}
@@ -46,6 +62,6 @@ export default function Card({
           Code
         </a>
       </div>
-    </article>
+    </motion.article>
   );
 }

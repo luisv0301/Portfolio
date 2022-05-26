@@ -6,7 +6,7 @@ import { useStaticQuery, graphql } from "gatsby";
 export default function Seo({ title, description }) {
   const { site } = useStaticQuery(query);
 
-  const { defaultTitle, defaultDescription, keyword, twitterUsername, image } =
+  const { defaultTitle, defaultDescription, keyword, twitterUsername} =
     site.siteMetadata;
 
   const seo = {
@@ -25,10 +25,10 @@ export default function Seo({ title, description }) {
       <meta name="theme-color" content="#a855f7" />
       <meta name="description" content={seo.description} />
       <meta name="keyword" content={keyword} />
-      <meta name="image" content={image} />
+      <meta name="image" content="https://drive.google.com/uc?export=view&id=1jvog623u5MjTOw8zN3EmMNIs8_E4AbP7" />
       <meta name="twitter:creator" content={twitterUsername} />
-      <meta name="og:image" content={image} />
-      <meta name="twitter:image" content={image} />
+      <meta name="og:image" content="https://drive.google.com/uc?export=view&id=1jvog623u5MjTOw8zN3EmMNIs8_E4AbP7" />
+      <meta name="twitter:image" content="https://drive.google.com/uc?export=view&id=1jvog623u5MjTOw8zN3EmMNIs8_E4AbP7" />
       <meta name="twitter:title" content={seo.title} />
     </Helmet>
   );
