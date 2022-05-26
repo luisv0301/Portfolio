@@ -39,7 +39,7 @@ const IndexPage = ({ data }) => {
       <Navbar />
       <MobileNabar/>
       <Header />
-      <main>
+      <main style={{overflowX: "hidden"}}>
         <Section title="About me" id="about-me">
           <TimeLine/>
         </Section>
